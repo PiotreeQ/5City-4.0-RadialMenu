@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    font-size: min(.83333333vw, 1.8009478673vh);
+    transition: font-size .15s linear;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+    color: #fff;
+}
+
+.main-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    display: flex; justify-content: center; align-items: center;
+}
+
+.menu-wrapper {
+    position: relative;
+    width: 30rem;
+    height: 30rem;
+    display: none;
+}
+
+.item-wrapper {
+    position: absolute;
+    display: flex; align-items: center; width: 12.5rem; gap: .75rem;
+    background: #100f10d1;
+    padding: .75rem;
+    font-weight: 600;
+    border-radius: .25rem;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: all 100ms ease;
+}
+
+.item-wrapper:hover {
+    background: #181618b7;
+}
+
+.item-wrapper span {
+    text-align: center; width: 7.5rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+}
+
+.item-wrapper > div {
+    background-color: #9b63f3;
+    width: 1.5rem; height: 1.5rem;
+    display: flex; align-items: center; justify-content: center; margin-left: auto;
+    border-radius: .25rem;
+    font-weight: 700;
+}
+
+.center-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #100f10ce;
+    border-radius: 50%;
+    width: 3rem; height: 3rem;
+    display: none; align-items: center; justify-content: center;
+    border: .2rem solid #9a63f3b9;
+    cursor: pointer;
+    transition: all 150ms ease;
+}
+
+.center-wrapper:hover {
+    border: .2rem solid #ab79fbb9;
+}
+
+.open {
+    animation: open 600ms ease;
+}
+
+.close {
+    animation: close 600ms ease;
+}
+
+@keyframes open {
+    0% {
+        transform: rotate(-40deg) scale(0.0);
+    }
+    100% {
+        transform: rotate(0deg) scale(1.0);
+    }
+}
+
+@keyframes close {
+    9% {
+        transform: rotate(0deg) scale(1.0);
+    }
+    100% {
+        transform: rotate(-40deg) scale(0.0);
+    }
+}

@@ -1,0 +1,1 @@
+-- Add Max 6 Items in one Menu, more will not be displayed in menu.
